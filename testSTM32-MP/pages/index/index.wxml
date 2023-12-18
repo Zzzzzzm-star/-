@@ -1,0 +1,76 @@
+<!--index.wxml-->
+<view class="page-container">
+<!-- 头部部分 -->>
+  <view class="header-container">
+    <view class="header-air">
+      <view>
+        空气质量 - 良
+      </view>
+      <view>
+        天河 - 广州市
+      </view>
+    </view>
+    <view class="header-title">
+      <view>
+        60
+      </view>
+      <view>
+        晴天
+      </view>
+    </view>
+    <view class="header-ad">
+      今天天气针不戳（嗨嗨嗨）
+    </view>
+  </view>
+<!-- 数据部分 -->>
+<view class="data-container">
+<!-- 温度 -->
+  <view class="data-card">
+    <image class="data-card__icon" src="/static/temp.png" />
+    <view class="data-card__text">
+      <view class="data-card__title">
+        温度
+      </view>
+      <view class="date-card__value">
+        {{ Temp }} ℃
+      </view>
+    </view>
+  </view>
+<!-- 湿度 -->
+  <view class="data-card">
+    <image class="data-card__icon" src="/static/hum.png" />
+    <view class="data-card__text">
+      <view class="data-card__title">
+        湿度
+      </view>
+      <view class="date-card__value">
+        {{ Hum }} %
+      </view>
+    </view>
+  </view>
+<!-- 客厅灯 -->
+  <view class="data-card">
+    <image class="data-card__icon" src="/static/taideng.png" />
+    <view class="data-card__text">
+      <view class="data-card__title">
+        客厅灯
+      </view>
+      <view class="date-card__value">
+      <switch checked="{{Led}}" bindchange="onLedChange" color="#3d7ef9"/>
+      </view>
+    </view>
+  </view>
+<!-- 报警器 -->
+  <view class="data-card">
+    <image class="data-card__icon" src="/static/alarm.png" />
+    <view class="data-card__text">
+      <view class="data-card__title">
+        报警器
+      </view>
+      <view class="date-card__value">
+      <switch checked="{{ Beep }}" bindchange="onBeepChange" color="#3d7ef9"/>
+      </view>
+    </view>
+  </view>
+</view>
+</view>
